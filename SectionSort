@@ -1,0 +1,48 @@
+package yexin.java.base;/**
+ * Company: Huazhong University of science and technology
+ * 华中科技大学电气学院聚变与等离子体研究所
+ * Version: V1.0
+ * Author: Victor
+ * Contact: 1650996069@qq.com  2018--2020
+ * Software: IntelliJ IDEA
+ * File: SelectionSort
+ * Time: 2019/2/25 19:37
+ * Desc:
+ **/
+
+public class SelectionSort {
+    public static void main(String[] args) {
+        int[] intArray = {12,45,2,3,78,34,1,9,5};
+
+        System.out.println("排序之前的数组：");
+        for(int a : intArray){
+            System.out.print(a+"  ");
+        }
+
+        System.out.println();
+
+        int tmp = 0;
+
+        for(int i=0;i < intArray.length;i++){
+            int currenNum = intArray[i];
+            int index = i;
+            for(int j=i;j < intArray.length;j++){
+                if(intArray[j] < currenNum){
+                    index = j;
+                    currenNum = intArray[j];
+                }
+            }
+
+            tmp = intArray[i];
+            intArray[i] = intArray[index];
+            intArray[index] = tmp;
+
+        }
+
+        System.out.println("排序后的数组：");
+        for(int b:intArray){
+            System.out.print(b+" ");
+        }
+
+    }
+}
