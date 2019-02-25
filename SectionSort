@@ -32,7 +32,7 @@ public class SelectionSort {
                     currenNum = intArray[j];
                 }
             }
-
+            //找到最大的拿出来进行交换，而不知在里面比较交换，否则是冒泡怕排序。
             tmp = intArray[i];
             intArray[i] = intArray[index];
             intArray[index] = tmp;
